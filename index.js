@@ -4,7 +4,7 @@ const requests = require('requests');
 
 
 
-const homeFile = fs.readFileSync("../dist/index.html", "utf-8", {"content-type":"text/html"});
+const homeFile = fs.readFileSync("index.html", "utf-8", {"content-type":"text/html"});
 
 const replaceVal = (tempVal, orgVal)=>{
     let temperature  = tempVal.replace("{%tempval%}", orgVal.main.temp);
