@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const requests = require('requests');
+const port = process.env.PORT || 3000;
 
 
 
@@ -32,7 +33,7 @@ const replaceVal = (tempVal, orgVal)=>{
             });
         }
     });
-    server.listen(3000, ()=>{
-        console.log("server is running");
+    server.listen(port, ()=>{
+        console.log("server is running at:" + port);
     });
 
